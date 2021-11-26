@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <title>Sign up</title>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <h2>Sign up</h2>
+            <div class="form">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" required autocomplete="off">
+            <br>
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" required autocomplete="off">
+            <br>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" required autocomplete="off">
+            <br>
+            <label for="password">Password</label>
+            <input type="password" minlength="6" id="password" required autocomplete="off">
+            <span id="passSpan" style="color: red;" >**enter minimum 6 length passowrd</span>
+            <br>
+            <br>
+            <label for="cpassword">Confirm Password</label>
+            <input type="password" required id="cpassword" autocomplete="off">
+            <br>
+            <button type="submit" onclick="validate()" >Submit</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function validate(){
+            var passowrd = document.getElementById("password").value;
+            var cpassowrd = document.getElementById("cpassword").value;
+            if(passowrd!=cpassowrd)
+              alert("Password mismatch");
+        }
+    </script>
+</body>
+</html>
